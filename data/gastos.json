@@ -1,1 +1,25 @@
-{"gastos":[]}
+{
+    "gastos": [
+        {
+            "roommate": "Joann Fuller",
+            "monto": 15000,
+            "descripcion": "Articulos de limpieza",
+            "fecha": "2024-06-11T02:03:14.384Z",
+            "id": "ea103692-9264-4471-a432-dc828331d48a"
+        },
+        {
+            "roommate": "Henry Wright",
+            "monto": 15000,
+            "descripcion": "Tabaco",
+            "fecha": "2024-06-11T02:03:20.760Z",
+            "id": "3747773c-7106-4a67-82c2-fdf94f8e22e7"
+        },
+        {
+            "roommate": "Jesús Vidal",
+            "monto": 9000,
+            "descripcion": "Bebidas",
+            "fecha": "2024-06-11T02:03:33.473Z",
+            "id": "399cbe7d-474b-4b46-9f7e-1585d2168549"
+        }
+    ]
+}

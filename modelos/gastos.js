@@ -74,29 +74,31 @@ const borrarGastos = async (id) => {
     }
 }
 
+/* Funcion enviarEmail en desarrollo */
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.MAILER_USER,
-        pass: process.env.MAILER_PASS
-    }
-})
-const enviarEmail = async () => {
 
-    const obtenerEmail = await fs.readFile(roommatesFile, "utf-8")
-    const { roommates } = JSON.parse(obtenerEmail)
-    for (const roommate of roommates) {
-        const { email } = roommate
-        console.log(`Enviando email a: ${email}`)
-        const mailOptions = {
-            from: 'Nuevo gasto roommates <anders3x@gmail.com>',
-            to: email,
-            subject: 'Se ha registrado un nuevo gasto',
-            text: 'Se ha agregado un nuevo gasto mensual a la lista de gastos Roommates'
-        }
-        await transporter.sendMail(mailOptions)
-    }
-}
+// const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: process.env.MAILER_USER,
+//         pass: process.env.MAILER_PASS
+//     }
+// })
+// const enviarEmail = async () => {
 
-export { obtenerGastos, crearGastos, editarGastos, borrarGastos, enviarEmail }
+//     const obtenerEmail = await fs.readFile(roommatesFile, "utf-8")
+//     const { roommates } = JSON.parse(obtenerEmail)
+//     for (const roommate of roommates) {
+//         const { email } = roommate
+//         console.log(`Enviando email a: ${email}`)
+//         const mailOptions = {
+//             from: 'Nuevo gasto roommates <anders3x@gmail.com>',
+//             to: email,
+//             subject: 'Se ha registrado un nuevo gasto',
+//             text: 'Se ha agregado un nuevo gasto mensual a la lista de gastos Roommates'
+//         }
+//         await transporter.sendMail(mailOptions)
+//     }
+// }
+
+export { obtenerGastos, crearGastos, editarGastos, borrarGastos }

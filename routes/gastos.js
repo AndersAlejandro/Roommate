@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { obtenerGastos, crearGastos, editarGastos, borrarGastos, enviarEmail } from "../modelos/gastos.js";
+import { obtenerGastos, crearGastos, editarGastos, borrarGastos } from "../modelos/gastos.js";
 import { v4 as uuidv4 } from 'uuid'
 
 const router = Router()
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
         }
         try {
             await crearGastos(gasto)
-            await enviarEmail()
+            // await enviarEmail()
             res.status(201).json({
                 message: 'Gasto Creado con éxito',
                 status: 201
